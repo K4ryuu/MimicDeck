@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>MimicDeck</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<key>NSAccessibilityUsageDescription</key>
+	<string>MimicDeck needs Accessibility access to simulate mouse clicks and keyboard input.</string>
+	<key>NSInputMonitoringUsageDescription</key>
+	<string>MimicDeck reads keyboard input while you are recording a macro so the captured sequence matches what you pressed.</string>
+</dict>
+</plist>

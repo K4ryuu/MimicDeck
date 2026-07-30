@@ -1,0 +1,11 @@
+// The one place the app version lives.
+//
+// Every target inherits this through the project's base configuration, so
+// bumping a release is a one-line edit here. Keep it in step with the top
+// entry in CHANGELOG.md.
+//
+//   MARKETING_VERSION       what users see, e.g. Settings -> About, DMG name
+//   CURRENT_PROJECT_VERSION build number, bump on every build
+
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1
