@@ -5,6 +5,16 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- The project relied on `SWIFT_DEFAULT_ACTOR_ISOLATION` to put `AppDelegate`
+  on the main actor. Xcode 16 ignores that setting, so building from source
+  failed there while succeeding on Xcode 26. Isolation is now spelled out in
+  the code and no longer depends on the toolchain version. No runtime change,
+  so the 1.0.0 binary is unaffected.
+
 ## [1.0.0] - 2026-07-31
 
 First public release.
