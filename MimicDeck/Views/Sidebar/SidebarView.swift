@@ -11,7 +11,7 @@ final class Navigation {
     var section: SidebarSection? = .autoClicker
 }
 
-enum SidebarSection: String, CaseIterable, Identifiable, Hashable {
+nonisolated enum SidebarSection: String, CaseIterable, Identifiable, Hashable {
     case autoClicker
     case macros
     case settings

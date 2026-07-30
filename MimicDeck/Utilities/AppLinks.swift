@@ -4,7 +4,7 @@
 
 import Foundation
 
-enum AppLinks {
+nonisolated enum AppLinks {
     static let author = "K4ryuu"
     static let repositorySlug = "K4ryuu/MimicDeck"
 

@@ -3,6 +3,7 @@
 
 import AppKit
 
+@MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private static let minimumContentSize = NSSize(width: 1080, height: 640)
 
