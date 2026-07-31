@@ -136,7 +136,7 @@ services, and using it can get your account banned. This tool exists for
 repetitive local work: UI testing, grinding through a form, single-player
 games, accessibility. What you point it at is on you.
 
-An imported `.mimicdeck` file can contain any sequence of clicks and
+An imported macro file can contain any sequence of clicks and
 keystrokes, and those go to whatever app is focused when you run it. The
 importer tells you what is in a file before it lands in your library, and
 warns you when the macro types rather than only clicks. Treat one from a

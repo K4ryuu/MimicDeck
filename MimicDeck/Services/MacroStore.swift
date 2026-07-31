@@ -131,7 +131,6 @@ final class MacroStore {
     }
 
     nonisolated static let currentBundleVersion = 1
-    nonisolated static let exportFileExtension = "mimicdeck"
 
     /// Encode `ids`, or everything when nil.
     func exportData(for ids: Set<UUID>? = nil) throws -> Data {

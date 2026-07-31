@@ -255,7 +255,7 @@ struct MacroListView: View {
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
         panel.title = "Import macros"
-        panel.message = "Choose an MimicDeck macro file to import."
+        panel.message = "Choose a MimicDeck macro file to import."
 
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do {
@@ -302,7 +302,9 @@ struct MacroListView: View {
     private func saveBundle(data: Data, suggestedName: String) {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.json]
-        panel.nameFieldStringValue = "\(suggestedName).\(MacroStore.exportFileExtension)"
+        // No custom extension: the panel enforces allowedContentTypes, so a
+        // suggested ".mimicdeck" only came back as "name.mimicdeck.json".
+        panel.nameFieldStringValue = suggestedName
         panel.title = "Export macros"
 
         guard panel.runModal() == .OK, let url = panel.url else { return }

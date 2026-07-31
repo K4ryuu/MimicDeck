@@ -5,15 +5,20 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.1] - 2026-07-31
 
 ### Fixed
 
+- Exporting wrote files called `name.mimicdeck.json`. The save panel enforces
+  its allowed content type, so the suggested `.mimicdeck` extension was only
+  ever appended to, never used. Exports are now plain `.json`, which is what
+  the format has always been. Files written by 1.0.0 still import fine.
+- The import panel said "Choose an MimicDeck macro file", left over from the
+  rename.
 - The project relied on `SWIFT_DEFAULT_ACTOR_ISOLATION` to put `AppDelegate`
   on the main actor. Xcode 16 ignores that setting, so building from source
   failed there while succeeding on Xcode 26. Isolation is now spelled out in
-  the code and no longer depends on the toolchain version. No runtime change,
-  so the 1.0.0 binary is unaffected.
+  the code and no longer depends on the toolchain version.
 
 ## [1.0.0] - 2026-07-31
 
@@ -36,7 +41,7 @@ First public release.
   pauses automatically whenever that app is not frontmost.
 - **Global hotkeys.** Per-macro and per-clicker combos that work from any app.
 - **Emergency stop.** Opt-in global panic key that stops anything running.
-- **Import / export.** Macros travel as `.mimicdeck` JSON bundles.
+- **Import / export.** Macros travel as JSON bundles.
   Importing shows what is in the file first, and says plainly when the macro
   presses keys and types text rather than only clicking.
 - **Menu bar mode.** Hide the Dock icon and drive the app from a status item.
